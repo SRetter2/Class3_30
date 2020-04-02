@@ -1,0 +1,21 @@
+﻿@model ResultsViewModel
+
+<div class="well" style="margin-top:40px">
+    <form action="/home/Results">
+        <br />
+        <input type="text" placeholder="Enter some text" class="form-control" name="text" value="@Model.Text" />
+        <br />
+        <button class="btn btn-primary">Submit</button>
+        <br />
+    </form>
+</div>
+
+
+@foreach (KeyValuePair<char, int> kvp in Model.Alphabet)
+{
+    <h4>
+        There were @kvp.Value @kvp.Key (s)
+    </h4>
+
+}
+
